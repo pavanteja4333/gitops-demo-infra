@@ -1,0 +1,28 @@
+# Default values for app-chart.
+
+app:
+  replicaCount: 1
+  image:
+    # When simulating locally, we load from local registry or Docker daemon.
+    # When deploying via GHCR in production, the CI pipeline updates this.
+    repository: gitops-demo-app
+    tag: "v-local-20260523-141949"
+    pullPolicy: IfNotPresent
+  service:
+    type: ClusterIP
+    port: 8080
+
+postgres:
+  image:
+    repository: postgres
+    tag: 15-alpine
+    pullPolicy: IfNotPresent
+  service:
+    port: 5432
+  credentials:
+    username: dbadmin
+    database: demodb
+    # NOTE: In production, do not commit passwords to git.
+    # Use Sealed Secrets, Vault, or AWS Secrets Manager.
+    # We define a default here to make the demo self-contained and immediately functional.
+    password: Password123!
