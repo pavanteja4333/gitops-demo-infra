@@ -5,9 +5,13 @@ metadata:
   labels:
     app: go-app
 spec:
+  type: {{ .Values.app.service.type | default "ClusterIP" }}
   ports:
     - port: {{ .Values.app.service.port }}
       targetPort: 8080
       name: httpport
+      {{- if eq .Values.app.service.type "NodePort" }}
+      nodePort: {{ .Values.app.service.nodePort | default 30080 }}
+      {{- end }}
   selector:
     app: go-app

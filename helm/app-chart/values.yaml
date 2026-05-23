@@ -9,8 +9,9 @@ app:
     tag: "v-local-20260523-141949"
     pullPolicy: IfNotPresent
   service:
-    type: ClusterIP
+    type: NodePort
     port: 8080
+    nodePort: 30080
 
 postgres:
   image:
