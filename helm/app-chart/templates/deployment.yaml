@@ -6,6 +6,7 @@ metadata:
     app: go-app
 spec:
   replicas: {{ .Values.app.replicaCount }}
+  revisionHistoryLimit: 3
   selector:
     matchLabels:
       app: go-app
