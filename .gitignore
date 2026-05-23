@@ -1,0 +1,17 @@
+# Local IaC binaries and caches
+**/.terraform/
+.terraform.lock.hcl
+
+# Terraform State files
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+crash.log
+
+# Helm artifacts
+*.tgz
+
+# OS metadata
+.DS_Store
+Thumbs.db
