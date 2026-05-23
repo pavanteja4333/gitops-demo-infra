@@ -6,7 +6,7 @@ app:
     # When simulating locally, we load from local registry or Docker daemon.
     # When deploying via GHCR in production, the CI pipeline updates this.
     repository: ghcr.io/pavanteja4333/gitops-demo-app
-    tag: "v-local-20260523-141949"
+    tag: "v-local-20260523-194656"
     pullPolicy: IfNotPresent
   service:
     type: NodePort
