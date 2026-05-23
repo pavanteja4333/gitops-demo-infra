@@ -8,7 +8,7 @@ spec:
   source:
     # URL of the gitops-infra-repo. When setting up in GitHub, replace this with your actual GitHub repo URL.
     # For local test files, you can also point to a local Git server or folder accessible from the cluster.
-    repoURL: 'https://github.com/YOUR_GITHUB_USERNAME/gitops-infra-repo.git'
+    repoURL: 'https://github.com/pavanteja4333/gitops-demo-infra.git'
     targetRevision: HEAD
     path: helm/app-chart
     helm:
