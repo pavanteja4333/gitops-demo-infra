@@ -3,15 +3,14 @@
 app:
   replicaCount: 1
   image:
-    # When simulating locally, we load from local registry or Docker daemon.
-    # When deploying via GHCR in production, the CI pipeline updates this.
     repository: ghcr.io/pavanteja4333/gitops-demo-app
-    tag: "v-af322fddfb62f84a2010fec8da9c29fb34f503ab"
+    tag: "latest"
     pullPolicy: IfNotPresent
   service:
     type: NodePort
     port: 8080
     nodePort: 30080
+  environment: "dev"
 
 postgres:
   image:
@@ -24,6 +23,4 @@ postgres:
     username: dbadmin
     database: demodb
     # NOTE: In production, do not commit passwords to git.
-    # Use Sealed Secrets, Vault, or AWS Secrets Manager.
-    # We define a default here to make the demo self-contained and immediately functional.
     password: Password123!

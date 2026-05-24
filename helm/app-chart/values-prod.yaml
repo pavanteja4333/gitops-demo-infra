@@ -1,0 +1,7 @@
+app:
+  replicaCount: 3
+  image:
+    tag: "v-local-20260524-115226"
+  service:
+    nodePort: 30082
+  environment: "prod"

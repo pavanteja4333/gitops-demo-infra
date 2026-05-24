@@ -1,0 +1,7 @@
+app:
+  replicaCount: 1
+  image:
+    tag: "v-local-20260524-115109"
+  service:
+    nodePort: 30080
+  environment: "dev"

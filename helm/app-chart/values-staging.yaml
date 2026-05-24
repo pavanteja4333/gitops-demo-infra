@@ -1,0 +1,7 @@
+app:
+  replicaCount: 2
+  image:
+    tag: "v-local-20260524-115153"
+  service:
+    nodePort: 30081
+  environment: "staging"
