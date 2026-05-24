@@ -1,7 +1,7 @@
 app:
   replicaCount: 1
   image:
-    tag: "v-a18fa0d24ebfa72506d3b728d6feaff863c4a89c"
+    tag: "v-9d85633d552adb90697e86bdb5c164d959e3eafc"
   service:
     nodePort: 30080
   environment: "dev"
